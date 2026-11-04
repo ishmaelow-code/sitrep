@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Situational Update</title>
+<style>
+  body {
+    margin: 0;
+    padding: 24px;
+    background: #fff;
+  }
+
+  .banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 800px;
+    height: 48px;
+    margin: 0 auto;
+    background: #c8111e;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  }
+
+  /* Only the icon blinks */
+  .icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    animation: blink 1s steps(1, end) infinite;
+  }
+
+  .text {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  @keyframes blink {
+    0%, 60%  { opacity: 1; }
+    61%, 100% { opacity: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .icon { animation: none; }
+  }
+
+  @media (max-width: 480px) {
+    .text { font-size: 17px; }
+    .icon { width: 26px; height: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="banner" role="alert">
+  <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+    <path d="M16 2.5 L30.5 29 H1.5 Z" fill="#ffd200" stroke="#e0a800" stroke-width="1" stroke-linejoin="round"/>
+    <rect x="14.3" y="10.5" width="3.4" height="9.5" rx="1.2" fill="#111"/>
+    <circle cx="16" cy="24" r="1.0" fill="#111"/>
+  </svg>
+  <span class="text">Situational Update</span>
+</div>
+
+</body>
+</html>
